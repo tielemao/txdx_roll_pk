@@ -45,7 +45,7 @@ class Role:
         为对象实现相加的方法，统计最终面板属性
         """
         self.panel_hp += other.hp
-        self.panel_mp += other.mp
+        self.panel_mp = self.panel_mp + other.mp - other.use_mp
         self.panel_str += other.str
         self.panel_defense += other.defense
         self.panel_low_roll += other.low_roll
